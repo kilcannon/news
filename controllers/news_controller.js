@@ -3,9 +3,7 @@ var Comment = require('../models/comment');
 var cheerio = require('cheerio');
 var request = require('request');
 
-// export the routes
 module.exports = function(app) {
-    // get root
     app.get('/', function(_request, response) {
         var scrapings = [];
         request('https://www.nytimes.com/', function(_error, _response, html) {
@@ -26,7 +24,6 @@ module.exports = function(app) {
         });
     });
 
-    // api route for all saved articles
     app.get('/api/articles', function(_request, response) {
         Article.find({}, function(error, articles) {
             if (error) {
