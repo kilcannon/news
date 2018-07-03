@@ -6,15 +6,15 @@ var articleSchema = new Schema({
         type: String,
         trim: true,
         unique: true,
-        required: [true, 'The title of the article is required.']
+        required: true
     },
     origin: {
         type: String,
-        required: [true, 'The origin of the article is required.']
+        required: true
     },
     link: {
         type: String,
-        required: [true, 'The link to the article is required.']
+        required: true
     },
     timestamp: {
         type: Date,
