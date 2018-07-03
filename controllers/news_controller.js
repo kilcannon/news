@@ -10,7 +10,7 @@ module.exports = function(app) {
         var scrapings = [];
         request('https://www.nytimes.com/', function(_error, _response, html) {
             var $ = cheerio.load(html);
-            $('.title').each(function(i, element) {
+            $('.story-heading').each(function(i, element) {
                 if (i % 2 !== 0) {
                     var articleObject = {};
                     articleObject.id = i;
