@@ -8,7 +8,7 @@ module.exports = function(app) {
     // get root
     app.get('/', function(_request, response) {
         var scrapings = [];
-        request('https://news.ycombinator.com/', function(_error, _response, html) {
+        request('https://www.nytimes.com/', function(_error, _response, html) {
             var $ = cheerio.load(html);
             $('.title').each(function(i, element) {
                 if (i % 2 !== 0) {
