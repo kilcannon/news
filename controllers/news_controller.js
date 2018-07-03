@@ -16,7 +16,7 @@ module.exports = function(app) {
                     articleObject.id = i;
                     articleObject.title = $('a', element).first().text();
                     articleObject.link = $('a', element).attr('href');
-                    articleObject.origin = $(element).text;
+                    articleObject.origin = 'https://www.nytimes.com';
                     scrapings.push(articleObject);
                 }
             });
