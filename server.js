@@ -27,8 +27,7 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 
-mongoose.connect('mongodb://heroku_w84ktq71:ipefkl8ksohi858fviu2j7o7ib' +
-    '@ds019471.mlab.com:19471/heroku_w84ktq71');
+mongoose.connect('mongodb://heroku_k02drlv7:sn5p4kbfpp9c5los079kh89eeh@ds125831.mlab.com:25831/heroku_k02drlv7');
 var db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'connection error:'));
